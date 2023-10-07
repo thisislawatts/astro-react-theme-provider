@@ -1,4 +1,5 @@
 import { Box, ThemeUIProvider } from "theme-ui";
+import NestedBox from "./NestedBox";
 
 const theme = {
   fonts: {
@@ -10,6 +11,7 @@ const theme = {
     text: "#000",
     background: "#111",
     primary: "#33e",
+    secondary: "lime",
   },
   space: [0, 10, 20, 30, 40],
 };
@@ -22,11 +24,15 @@ export default function App(props: any) {
         sx={{
           bg: "primary",
           p: 3,
+          mt: 1
         }}
       >
         Box Content
       </Box>
       {props.children}
+      <NestedBox sx={{
+        mb: 2
+      }}/>
       App.end
     </ThemeUIProvider>
   );
